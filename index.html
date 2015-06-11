@@ -1,0 +1,103 @@
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <meta name="apple-mobile-web-app-title" content="Lichtsteuerung">
+        <meta name="apple-mobile-web-app-status-bar-style" content="transculent-black">
+        <!-- iPhone startup image -->
+        <link href="http://urban-styles.de/startupimages/iphone.png" media="(device-width: 320px) and (device-height: 568px) and (-webkit-device-pixel-ratio: 2)" rel="apple-touch-startup-image">
+        <!-- iPad retina portrait startup image -->
+        <link href="http://urban-styles.de/startupimages/ipad_portrait.png" media="(device-width: 768px) and (device-height: 1024px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)" rel="apple-touch-startup-image">
+        <!-- iPad retina landscape startup image -->
+        <link href="http://urban-styles.de/startupimages/ipad_landscape.png" media="(device-width: 768px) and (device-height: 1024px) and (-webkit-device-pixel-ratio: 2) and (orientation: landscape)" rel="apple-touch-startup-image">
+        <link rel="apple-touch-icon" href="icons/Icon-60.png">
+        <link rel="apple-touch-icon" sizes="76x76" href="icons/Icon-67.png">
+        <link rel="apple-touch-icon" sizes="120x120" href="icons/Icon-120.png">
+        <link rel="apple-touch-icon" sizes="152x152" href="icons/Icon-152.png">
+        <title>Lichtsteuerung</title>
+        <link rel="stylesheet" type="text/css" href="http://code.ionicframework.com/1.0.0-beta.14/css/ionic.min.css">
+        <link rel="stylesheet" type="text/css" href="css/style.css">
+        <link rel="stylesheet" type="text/css" href="http://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
+        <script type="text/javascript" src="http://code.jquery.com/jquery-1.11.2.min.js"></script>
+        <script type="text/javascript" src="js/jquery.event.move.js"></script>
+        <script type="text/javascript" src="js/math.js"></script>
+        <script type="text/javascript" src="js/graphics.js"></script>
+        <script type="text/javascript" src="js/colorpicker.js"></script>
+        <script type="text/javascript" src="js/functions.js"></script>
+    </head>
+    <body>
+        <div class="bar bar-header bar-positive">
+            <h1 class="title">Lichtsteuerung</h1>
+        </div>
+        <div class="content">
+            <div class="row responsive-sm">
+                <div class="col">
+                    <canvas class="colorpicker square center"></canvas>
+                    <div class="range range-positive">
+                        <i class="icon ion-ios7-sunny-outline"></i>
+                        <input type="range" name="brightness" id="brightness" min="0" max="100" value="33">
+                        <i class="icon ion-ios7-sunny"></i>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="row responsive-md">
+                        <div class="col">
+                            <ul class="list">
+                                <li class="item item-divider">
+                                    Aktionen
+                                </li>
+                                <li class="item item-toggle">
+                                    Spot vorne
+                                    <label class="toggle toggle-positive">
+                                        <input type="checkbox" name="spot1">
+                                        <div class="track">
+                                            <div class="handle"></div>
+                                        </div>
+                                    </label>
+                                </li>
+                                <li class="item item-toggle">
+                                    Spot hinten
+                                    <label class="toggle toggle-positive">
+                                        <input type="checkbox" name="spot2">
+                                        <div class="track">
+                                            <div class="handle"></div>
+                                        </div>
+                                    </label>
+                                </li>
+                                <li class="item item-toggle">
+                                    Ambient
+                                    <label class="toggle toggle-positive">
+                                        <input type="checkbox" name="ambient">
+                                        <div class="track">
+                                            <div class="handle"></div>
+                                        </div>
+                                    </label>
+                                </li>
+                                <li class="item item-toggle">
+                                    Standleuchte
+                                    <label class="toggle toggle-positive">
+                                        <input type="checkbox" name="floor">
+                                        <div class="track">
+                                            <div class="handle"></div>
+                                        </div>
+                                    </label>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="col">
+                            <ul>
+                                <li>
+                                    <button class="button icon-left ion-power button-assertive button-full" name="leave">Alles aus</button>
+                                </li>
+                                <li>
+                                    <button class="button icon-left ion-ios-download-outline button-dark button-full" name="save">Konfiguration speichern</button>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
